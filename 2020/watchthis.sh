@@ -1,4 +1,5 @@
 #!/bin/bash
+# Compare and Backup arbritray files - Brant Goings
 
 # Compares two files provided in the arguments to test for changes
 # Make sure to copy the original file the first time

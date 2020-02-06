@@ -1,4 +1,8 @@
 #!/bin/bash
+# Harden SSH - Evan Eastwood
+
+# Doesn't make any changes... just installs iptables
+
 echo $UID
 apt-get install -q iptables
 /etc/init.d/iptables save

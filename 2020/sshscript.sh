@@ -1,4 +1,6 @@
 #!/bin/bash
+# SSH Failed Attempts - Mark Wallace
+
 echo "running..." > /dev/tty
 while :
 do
