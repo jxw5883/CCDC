@@ -1,0 +1,1 @@
+﻿Get-LocalUser -Name * | Select-Object Name, Enabled, PasswordChangeableDate, PasswordExpires, UserMayChangePassword, PasswordRequired, PasswordLastSet, LastLogon | out-file -FilePath "C:\Users\Ellie Rennard\Desktop\pwchanges.txt"
