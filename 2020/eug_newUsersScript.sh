@@ -1,5 +1,7 @@
 #!/usr/bin/env bash 
 
+#petr's solution is much better/faster, since this needs to parse auth.log + make a new file to output from 
+
 echo current users: 
 command w 
 echo -----------
