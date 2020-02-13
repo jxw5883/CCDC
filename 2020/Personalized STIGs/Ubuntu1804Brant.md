@@ -1,6 +1,8 @@
 # Ubuntu 18.04 STIG
 Written by Brant Goings - CCDC 2020
 
+Trial 1 - 4:09 up to Scripts. 13:45 total.
+
 Jump to [Users](#Users), [SSH](#SSH), [F/W](#F/W), [Scripts](#Scripts), or [Misc](#Misc)
 
 ---
