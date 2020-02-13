@@ -145,7 +145,14 @@ sudo crontab -e
 ```
 2. Check networking config
 ```bash
-ip addr
+ip addr add 192.168.50.5 dev eth0
+ip route add default via 192.168.50.100
+ip link set eth0 up
+```
+or
+```bash
+sudo ifconfig eth0 192.168.0.1 netmask 255.255.255.0
+sudo route add default gw 192.168.0.253 eth0
 ```
 3. Install fail2ban
 ```bash
