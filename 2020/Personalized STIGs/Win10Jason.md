@@ -1,6 +1,8 @@
 # Windows 10 STIG
 Written by Jason Mercede - CCDC 2020
 
+
+> Unneeded services that are kept running can lead to exploitable backdoors waiting to get hacked, and Cortana/Windows Search are no exception.  Shut the service/s down to prevent them from being used as an entryway to the system.
 ---
 #### Disable Cortona Service
 
