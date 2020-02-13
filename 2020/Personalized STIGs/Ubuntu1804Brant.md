@@ -16,7 +16,8 @@ sudo passwd root
 #### SSH
 
 1. Edit sshd.conf
-  1. Method 1 - Script
+
+Method 1 - Script
   ```bash
   nano updatessh.sh
   ```
@@ -36,7 +37,8 @@ sudo passwd root
   sudo chmod 755 updatessh.sh
   sudo ./updatessh.sh
   ```
-  2. Method 2 - Manual
+
+Method 2 - Manual
   ```bash
   sudo nano /etc/ssh/sshd_config
   ```
