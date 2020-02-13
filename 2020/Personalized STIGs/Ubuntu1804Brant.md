@@ -8,7 +8,6 @@ Written by Brant Goings - CCDC 2020
 ```
 sudo nano /etc/ssh/sshd_config
 ```
-2. Config to check
 ```
 Protocol 2
 AllowUsers validuser1 validuser2
@@ -20,13 +19,13 @@ X11Forwarding no
 LogLevel VERBOSE
 PermitEmptyPasswords no
 ```
-3. Restart SSH
 ```
 sudo service ssh restart
 ```
-4. Check SSH keys
+2. Check SSH keys
 ```
 cat ~/.ssh/known_hosts
+cat ~/.ssh/authorized_keys
 ```
 ---
 #### Check F/W
@@ -38,6 +37,7 @@ sudo iptables -L
 2. Allow established/related
 ```
 sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+sudo iptables -A OUTPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 ```
 
 3. Allow specific ports
@@ -55,11 +55,31 @@ sudo iptables -I INPUT 5 -m limit --limit 5/min -j LOG --log-prefix "iptables de
 ```
 tail /etc/passwd
 ```
-2. Check CRON
+2. Strengthen user passwords
+```
+sudo passwd root
+```
+3. Check CRON
 ```
 sudo crontab -e
 ```
-3. Check networking config
+4. Check networking config
 ```
 ip addr
+```
+5. Install fail2ban
+```
+sudo apt-get install fail2ban
+sudo nano /etc/fail2ban/jail.local
+```
+```
+[sshd]
+enabled = true
+port = 22
+filter = sshd
+logpath = /var/log/auth.log
+maxretry = 3
+```
+```
+sudo systemctl restart fail2ban
 ```
