@@ -18,6 +18,10 @@ sudo passwd root
 1. Edit sshd.conf
   1. Method 1 - Script
   ```bash
+  nano updatessh.sh
+  ```
+  ```bash
+  #!/bin/bash
   sudo sed -i '/^Protocol/s/1/2/' /etc/ssh/sshd_config
   Insert AllowUsers
   Insert DenyUser
@@ -27,6 +31,10 @@ sudo passwd root
   sudo sed -i '/^X11Forwarding/s/yes/no/' /etc/ssh/sshd_config
   sudo sed -i '/^LogLevel/s/yes/no/' /etc/ssh/sshd_config
   sudo sed -i '/^PermitEmptyPasswords/s/yes/no/' /etc/ssh/sshd_config
+  ```
+  ```bash
+  sudo chmod 755 updatessh.sh
+  sudo ./updatessh.sh
   ```
   2. Method 2 - Manual
   ```bash
@@ -48,7 +56,7 @@ sudo passwd root
 ```bash
 sudo service ssh restart
 ```
-1. Check SSH keys
+2. Check SSH keys
 ```bash
 cat ~/.ssh/known_hosts
 cat ~/.ssh/authorized_keys
@@ -60,17 +68,17 @@ cat ~/.ssh/authorized_keys
 ```bash
 sudo iptables -L
 ```
-1. Allow established/related
+2. Allow established/related
 ```bash
 sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 ```
 
-1. Allow specific ports
+3. Allow specific ports
 ```bash
 sudo iptables -A INPUT -p tcp --dport ssh -j ACCEPT
 ```
-1. Logging
+4. Logging
 ```bash
 sudo iptables -I INPUT 5 -m limit --limit 5/min -j LOG --log-prefix "iptables denied: " --log-level 7
 ```
@@ -83,7 +91,7 @@ sudo iptables -I INPUT 5 -m limit --limit 5/min -j LOG --log-prefix "iptables de
 echo "notify-send -t 3000 \"User logged in\" \`whoami\`" > /etc/profile.d/notify_log.sh
 echo "wall -n \"User logged in\" \`whoami\`" >> /etc/profile.d/notify_log.sh
 ```
-1. SSH login attempts
+2. SSH login attempts
 ```bash
 nano logattempt.sh
 ```
@@ -106,7 +114,7 @@ done
 sudo chmod 755 logattempt.sh
 sudo ./logattempt.sh
 ```
-1. Monitor sockets
+3. Monitor sockets
 ```bash
 nano sockmon.sh
 ```
@@ -132,11 +140,11 @@ sudo ./sockmon.sh
 ```bash
 sudo crontab -e
 ```
-1. Check networking config
+2. Check networking config
 ```bash
 ip addr
 ```
-1. Install fail2ban
+3. Install fail2ban
 ```bash
 sudo apt-get install fail2ban
 sudo nano /etc/fail2ban/jail.local
