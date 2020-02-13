@@ -19,28 +19,29 @@ sudo passwd root
 
 1. Edit sshd.conf
 
-Method 1 - Script
+  Method 1 - Script
   ```bash
   nano updatessh.sh
   ```
   ```bash
   #!/bin/bash
   sudo sed -i '/^Protocol/s/1/2/' /etc/ssh/sshd_config
-  Insert AllowUsers
-  Insert DenyUser
+  #Insert AllowUsers
+  #Insert DenyUser
   sudo sed -i '/^PermitRootLogin/s/yes/no/' /etc/ssh/sshd_config
   sudo sed -i '/^HostbasedAuthentication/s/yes/no/' /etc/ssh/sshd_config
   sudo sed -i '/^AllowTcpForwarding/s/yes/no/' /etc/ssh/sshd_config
   sudo sed -i '/^X11Forwarding/s/yes/no/' /etc/ssh/sshd_config
   sudo sed -i '/^LogLevel/s/yes/no/' /etc/ssh/sshd_config
   sudo sed -i '/^PermitEmptyPasswords/s/yes/no/' /etc/ssh/sshd_config
+  sudo service ssh restart
   ```
   ```bash
   sudo chmod 755 updatessh.sh
   sudo ./updatessh.sh
   ```
 
-Method 2 - Manual
+  Method 2 - Manual
   ```bash
   sudo nano /etc/ssh/sshd_config
   ```
@@ -55,11 +56,9 @@ Method 2 - Manual
   LogLevel VERBOSE
   PermitEmptyPasswords no
   ```
-
-
-```bash
-sudo service ssh restart
-```
+  ```bash
+  sudo service ssh restart
+  ```
 2. Check SSH keys
 ```bash
 cat ~/.ssh/known_hosts
