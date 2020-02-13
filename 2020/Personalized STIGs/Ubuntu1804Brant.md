@@ -1,6 +1,8 @@
 # Ubuntu 18.04 STIG
 Written by Brant Goings - CCDC 2020
 
+Jump to [Users](#Users), [SSH](#SSH), [F/W](#F/W), [Scripts](#Scripts), or [Misc](#Misc)
+
 ---
 #### Users
 1. Check passwd file
@@ -64,7 +66,7 @@ cat ~/.ssh/known_hosts
 cat ~/.ssh/authorized_keys
 ```
 ---
-#### Check F/W
+#### F/W
 
 1. Check current rules
 ```bash
@@ -86,7 +88,7 @@ sudo iptables -I INPUT 5 -m limit --limit 5/min -j LOG --log-prefix "iptables de
 ```
 
 ---
-#### Add Basic Scripts
+#### Scripts
 
 1. Notify logon
 ```bash
@@ -137,7 +139,7 @@ sudo chmod 755 sockmon.sh
 sudo ./sockmon.sh
 ```
 ---
-#### Check Misc.
+#### Misc
 1. Check CRON
 ```bash
 sudo crontab -e
