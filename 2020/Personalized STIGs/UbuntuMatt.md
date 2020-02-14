@@ -27,7 +27,7 @@ Ubuntu Hardening Guide -- MR
     cat /etc/shadow | awk -F: '($2==""){print $1}'
 
 # Key-Based SSH:
-    cd ~; 
+    cd ~;
     ssh-keygen -t rsa -b 4096
     ssh-copy-id $USERNAME_GOES_HERE@$IP_ADDR_GOES_HERE
 
