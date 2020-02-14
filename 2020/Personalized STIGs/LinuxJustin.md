@@ -1,4 +1,7 @@
 # Linux Account STIG
+
+Written by Justin Wu - CCDC 2020
+
 https://www.stigviewer.com/stig/red_hat_enterprise_linux_7/2018-11-28/finding/V-72005
 Linux system must be configured so that the root account should be the only account with unrestricted access.
 ## Description
