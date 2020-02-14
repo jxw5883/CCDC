@@ -1,3 +1,5 @@
+Petr Esakov
+
 1.	Apt update?
 2.	Change weak/default passwords on Accounts, Applications, and services
 a.	Usermod
@@ -14,4 +16,3 @@ a.	Chroot jail
 
 
 https://static.open-scap.org/ssg-guides/ssg-ubuntu1604-guide-default.html
-
