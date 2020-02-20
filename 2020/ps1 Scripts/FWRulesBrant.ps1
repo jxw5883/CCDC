@@ -17,3 +17,4 @@ netsh advfirewall show allprofiles | Select-String Filename
 
 # Checking a domain's F/W status: https://isc.sans.edu/forums/diary/Powershell+Active+Directory+and+the+Windows+Host+Firewall/24706/
 
+Set-NetFirewallProfile -name domain -LogMaxSizeKilobytes 10240 -LogAllowed true -LogBlocked true

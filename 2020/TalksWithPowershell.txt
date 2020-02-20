@@ -1,2 +1,4 @@
 Way to filter number of hits?
 Getting rid of bloatware rules?
+
+Get-NetFirewallRule -Enabled True | Get-NetFirewallProfile -Name Public
