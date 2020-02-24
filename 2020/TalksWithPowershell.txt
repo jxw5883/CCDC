@@ -1,4 +1,35 @@
 Way to filter number of hits?
-Getting rid of bloatware rules?
+- Enable logging
 
-Get-NetFirewallRule -Enabled True | Get-NetFirewallProfile -Name Public
+Getting rid of bloatware rules?
+- Disable based on DisplayGroup?
+
+Way to sort by "activating" first? Like Cisco?
+- Stronger filters
+
+Filtering through log files?
+- CSV
+
+What does the pipe do vs. Linux?
+-
+
+DefaultInbound/Outbound Block
+
+semi colon runs two separate commands
+
+measure-object # counts number of o\utput
+
+get-member
+Get-History
+new-cimsession
+- F/W Allow rules
+
+
+for-eachobject
+
+get-alias
+$env
+
+pssession
+enter-pssession
+exit-pssession
