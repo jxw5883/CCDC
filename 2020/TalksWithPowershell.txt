@@ -8,22 +8,19 @@ Way to sort by "activating" first? Like Cisco?
 - Stronger filters
 
 Filtering through log files?
-- CSV
+- CSV formatted
 
 What does the pipe do vs. Linux?
--
+- Same thing (ish)
 
 DefaultInbound/Outbound Block
 
-semi colon runs two separate commands
-
-measure-object # counts number of o\utput
+measure-object # counts number of output
 
 get-member
 Get-History
 new-cimsession
 - F/W Allow rules
-
 
 for-eachobject
 

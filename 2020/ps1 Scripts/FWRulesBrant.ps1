@@ -4,27 +4,21 @@ Get-NetFirewallProfile
 # Filters out rules in Public profile
 Get-NetFirewallProfile -Name Public | Get-NetFirewallRule
 
-# This doesn't work
-Get-NetFirewallRule -Enabled True #| Get-NetFirewallProfile -Name Public
-(Get-NetFirewallRule).Enabled # Returns values of property of object
-
-
-# or this
-Get-NetFirewallProfile -Name Public | Get-NetFirewallRule -Enabled True
+# These are the same
+Get-NetFirewallRule -Enabled True
+(Get-NetFirewallRule).Enabled
 
 Get-NetFirewallRule | Where-Object {$_.Enabled -like "True"}
 
 Get-NetFirewallRule | Where-Object {$_.Description -like "80"} # Finds more specific stuff too
 
 Get-NetFirewallRule | Where-Object {$_.Description -like "*80*"} | ft DisplayName, Profile, Enabled
-Get-NetFirewallRule | Where-Object {$_.Description -eq "*80*"} | ft DisplayName, Profile, Enabled
 
 Get-NetFirewallRule | ft Name, DisplayGroup
 
 Disable-NetFirewallRule
 
 # | outfile -FilePath doc.txt
-
 
 Get-NetConnectionProfile
 
