@@ -1,0 +1,21 @@
+Import-Module -Name ActiveDirectory
+
+<#
+Get-ADUser -filter * -Properties passwordlastset, passwordneverexpires | ft Name, passwordlastset, Passwordneverexpires
+#getting users based on their last password change 
+
+$currentTime = Get-Date -Year -Month -Date -Hour -Minute -Second
+
+$timethreshold = 5 
+
+$lastPWChange = Get-ADUser -filter * -Properties passwordlastset 
+#>
+
+$newPasswordUsers = Get-ADUser -Properties passwordLastSet | Where-Object {
+    $pw = $_.passwordLastSet
+    if ($pw -ne $null) {
+        $pw.ToShortDateString() -eq (Get-Date).ToShortDateString()
+    } 
+} | Select-Object passwordLastSet, Name
+
+#Get-Date can be changed based on the range you want
