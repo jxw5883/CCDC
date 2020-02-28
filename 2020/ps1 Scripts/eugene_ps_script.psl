@@ -1,6 +1,6 @@
 Import-Module -Name ActiveDirectory
 
-$newPasswordUsers = Get-ADUser -Properties passwordLastSet | Where-Object {
+$newPasswordUsers = Get-ADUser -filter * -Properties passwordLastSet | Where-Object {
     $pw = $_.passwordLastSet
     if ($pw -ne $null) {
         $pw.ToShortDateString() -eq (Get-Date).ToShortDateString()
