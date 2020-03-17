@@ -25,3 +25,5 @@ Get-NetFirewallRule | Where-Object {$_.Description -like "*80*"} | ft DisplayNam
 ### 3. Services
 - Disable RDP
 - Disable SMB
+
+DNS
