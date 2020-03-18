@@ -19,6 +19,8 @@ Outline of this year's competition, responsibilities, and after action report.
   - Can we reboot? Safe mode?
   - Snapshots?
   - Does Splunk come with any dashboards? Do the machines have forwarders already?
+  - Does the Palo Alto firewall come with an active WildFire or any other security subscription?
+  
 - Competetion 3/21 (Saturday) 3:00 - 8:00 PM E164 w/ an hour setup
 
 ### Machines
