@@ -5,6 +5,7 @@ Outline of this year's competition, responsibilities, and after action report.
 ### Upcoming Events
 - Conference Call 3/20 (Friday) 7:30 - 9:30 PM E101. Questions to cover:
   - Will we have internet access from the VMs? How "wide"?
+  - Practice Round real environment? 
   - What kind of stuff can we download? How much bandwidth do we have?
   - Is the Win 10 machine in scope for Red Team?
   - Why do we need to have the hosts running? They don't have any pertinent services.
