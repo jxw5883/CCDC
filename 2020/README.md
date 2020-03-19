@@ -4,9 +4,24 @@ Outline of this year's competition, responsibilities, and after action report.
 
 ### Upcoming Events
 - Conference Call 3/20 (Friday) 7:30 - 9:30 PM E101. Questions to cover:
-  - Will we have internet access from the VMs?
+  - Will we have internet access from the VMs? How "wide"?
+  - Practice Round real environment? 
+  - What kind of stuff can we download? How much bandwidth do we have?
   - Is the Win 10 machine in scope for Red Team?
   - Why do we need to have the hosts running? They don't have any pertinent services.
+  - What service will be used for Ubuntu DNS? Bind9?
+  - PHPmyadmin on Debian?
+  - Phantom OS or Splunk service?
+  - What host OS on Splunk and Phantom?
+  - Is there a domain for Windows boxes? Which machine is DC? Which ones are connected to it?
+  - Services like fail2ban allowed?
+  - How does the scorebot work in checking services?
+  - Why two DNS?
+  - Can we reboot? Safe mode?
+  - Snapshots?
+  - Does Splunk come with any dashboards? Do the machines have forwarders already?
+  - Does the Palo Alto firewall come with an active WildFire or any other security subscription?
+  
 - Competetion 3/21 (Saturday) 3:00 - 8:00 PM E164 w/ an hour setup
 
 ### Machines
@@ -36,9 +51,9 @@ Outline of this year's competition, responsibilities, and after action report.
 
 ### Team Coverage
 - Brant - Win 8.1 (> PA)
-- Petr - CentOS w/ Ecomm > Splunk
+- Petr - Phantom 4.1.94 > Splunk
 - Namo - PA > Win 2008
-- Justin - Phantom 4.1.94 > CentOS
+- Justin - CentOS w/ Ecomm > Debian
 - Matt - Win 2008 > Win 10
 - Mark - Ubuntu w/ DNS
 - Jason - Debian w/ MySQL
