@@ -23,6 +23,7 @@ Outline of this year's competition, responsibilities, and after action report.
   - Does the Palo Alto firewall come with an active WildFire or any other security subscription?
   - Any in-scope users aside from PDF?
   - VPN option?
+  - Site judge Slack?
 
 - Competetion 3/21 (Saturday) 3:00 - 8:00 PM E164 w/ an hour setup
 
