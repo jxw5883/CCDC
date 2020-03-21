@@ -25,6 +25,7 @@
 --Perhaps change the /etc/ssh/sshd.conf file so that only specific users (the ones I can use) can login with ssh to prevent anyone else from being mean
 --Check systemd scripts for any backdoor crap, list them all with systemctl --type=service and see if any suspicious stuff is running
 --Edit /etc/security/limits.conf to limit 1 login per user
+--IF YOU CAN TAKE UPDATES, DIRTY COW IS NASTY AND CAUSES RASHES
 
 
 ***MYSQL***
