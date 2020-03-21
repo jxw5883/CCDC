@@ -3,6 +3,10 @@ PAN-OS 8.0 admin guide: https://docs.paloaltonetworks.com/content/dam/techdocs/e
 
 *IMPORTANT*: PaloAlto is like Juniper. Don't forget to `commit` after making changes!
 
+* Remove extra admins
+* Disable management from external network
+* Disable HTTP and Telnet
+
 * Check for admin accounts, change passwords!
     * `show mgt-config users`, `delete mgt-config users <user>`, `set mgt-config users <user> password`
 * Check security policies
